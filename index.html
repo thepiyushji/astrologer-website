@@ -1,136 +1,1048 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Astrologer Piyush</title>
+<title>Astrologer Piyush Bhriguvanshi</title>
 
-    <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body{
-            background: linear-gradient(black, #1a1a1a);
-            color: white;
-            text-align: center;
-            font-family: Arial;
-            padding-top: 50px;
-        }
+<style>
 
-        img{
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid yellow;
-        }
-
-        h1{
-            color: yellow;
-            font-size: 50px;
-            margin-top: 20px;
-        }
-
-        p{
-            font-size: 22px;
-            width: 80%;
-            margin: auto;
-            line-height: 35px;
-        }
-
-        button{
-            background-color: yellow;
-            color: black;
-            border: none;
-            padding: 15px 35px;
-            font-size: 22px;
-            border-radius: 10px;
-            margin-top: 30px;
-            cursor: pointer;
-        }
-
-        button:hover{
-            background-color: orange;
-        }
-h2{
-    color: yellow;
-    margin-top: 50px;
-    font-size: 40px;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
-.service{
-    background-color: #222;
-    width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 22px;
-    border: 2px solid yellow;
+body{
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
 }
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#f5c542;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#f5c542;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 8%;
+gap:60px;
+flex-wrap:wrap;
+background:
+linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1518562180175-34a163b1a9a6?q=80&w=1600');
+background-size:cover;
+background-position:center;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:60px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-text h1 span{
+color:#f5c542;
+}
+
+.hero-text p{
+font-size:18px;
+color:#ddd;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#f5c542;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:40px;
+margin-right:15px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 0 20px #f5c542;
+}
+
+.btn2{
+background:transparent;
+border:2px solid #f5c542;
+color:#f5c542;
+}
+
+.hero-img{
+flex:1;
+text-align:center;
+min-width:300px;
+}
+
+.hero-img img{
+width:100%;
+max-width:420px;
+border-radius:25px;
+border:4px solid #f5c542;
+box-shadow:0 0 40px rgba(245,197,66,0.4);
+}
+
+/* SECTION */
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:45px;
+margin-bottom:50px;
+color:#f5c542;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+}
+
+.about img{
+width:350px;
+border-radius:20px;
+border:3px solid #f5c542;
+}
+
+.about-text{
+flex:1;
+min-width:300px;
+}
+
+.about-text h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about-text p{
+line-height:1.9;
+color:#ddd;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#151515;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#f5c542;
+box-shadow:0 0 25px rgba(245,197,66,0.2);
+}
+
+.card h3{
+margin:20px 0;
+font-size:24px;
+color:#f5c542;
+}
+
+.card p{
+color:#ccc;
+line-height:1.7;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+background:#151515;
+padding:40px;
+border-radius:20px;
+text-align:center;
+max-width:800px;
+margin:auto;
+}
+
+.testimonial p{
+font-size:18px;
+line-height:1.8;
+color:#ddd;
+}
+
+.testimonial h4{
+margin-top:20px;
+color:#f5c542;
+}
+
+/* FAQ */
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+details{
+background:#151515;
+margin-bottom:20px;
+padding:20px;
+border-radius:12px;
+cursor:pointer;
+}
+
+summary{
+font-size:20px;
+font-weight:600;
+color:#f5c542;
+}
+
+details p{
+margin-top:15px;
+color:#ddd;
+line-height:1.8;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact p{
+color:#ccc;
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:30px;
+text-align:center;
+color:#aaa;
+}
+
+/* FLOATING BUTTONS */
+
 .float-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:50px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+z-index:999;
+box-shadow:0 0 20px rgba(37,211,102,0.5);
+}
 
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0px 0px 15px #25D366;
+.float-call{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#f5c542;
+color:black;
+padding:16px 22px;
+border-radius:50px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+z-index:999;
+box-shadow:0 0 20px rgba(245,197,66,0.5);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:42px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+nav ul{
+display:none;
+}
 
 }
-    </style>
 
+</style>
 </head>
-<a class="float-whatsapp" onclick="openWhatsapp()">
-   WhatsApp
-</a>
+
 <body>
 
-    <img src="https://i.imgur.com/2DhmtJ4.png">
+<!-- NAVBAR -->
 
-    <h1>Astrologer Piyush</h1>
+<nav>
 
-    <p>
-        Love Problem Specialist | Relationship Expert | Astrology Guidance
-    </p>
-
-    <button onclick="openWhatsapp()">
-        Chat On WhatsApp
-    </button>
-<br><br>
-
-<button onclick="openInstagram()">
-    Instagram Profile
-</button>
-<h2>My Services</h2>
-
-<div class="service">
-    Love Problem Solution
+<div class="logo">
+Astrologer Piyush
 </div>
 
-<div class="service">
-    Ex Love Back
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#certificates">Awards</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>
+India's Trusted <span>Astrologer</span><br>
+Piyush Bhriguvanshi
+</h1>
+
+<p>
+Love Problem Specialist | Relationship Expert | Vashikaran Specialist | Marriage Problem Solution
+</p>
+
+<a href="https://wa.me/919816004884?text=Hello%20Astrologer%20Piyush%20Ji%2C%20I%20Need%20Guidance" class="btn">
+Chat On WhatsApp
+</a>
+
+<a href="https://instagram.com/the__piyush_hope" class="btn btn2">
+Instagram Profile
+</a>
+
 </div>
 
-<div class="service">
-    Husband Wife Dispute
+<div class="hero-img">
+
+<img src="myphoto2.jpg.jpeg">
+
 </div>
 
-<div class="service">
-    Marriage Astrology
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Astrologer Piyush
+</h2>
+
+<div class="about">
+
+<img src="myphoto.jpg.jpeg">
+
+<div class="about-text">
+
+<h2>
+Best Astrologer In India
+</h2>
+
+<p>
+Astrologer Piyush Bhriguvanshi is a trusted astrology expert helping people solve love, marriage, relationship, career and family problems through powerful Vedic Astrology and Vashikaran guidance. Thousands of people trust his remedies for accurate and positive solutions.
+</p>
+
 </div>
-    <script>
+
+</div>
+
+</section>
+<!-- CERTIFICATE SECTION START -->
+
+<section id="certificates" style="
+padding:100px 8%;
+background:#0f0f0f;
+">
+
+<h2 style="
+text-align:center;
+font-size:50px;
+color:#f5c542;
+margin-bottom:20px;
+font-weight:700;
+">
+Awards & Certificates
+</h2>
+
+<p style="
+text-align:center;
+color:#ccc;
+font-size:18px;
+margin-bottom:60px;
+">
+Trusted & Certified Astrology Expert
+</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+">
+
+<!-- CERTIFICATE 1 -->
+
+<div style="
+background:#181818;
+padding:25px;
+border-radius:25px;
+text-align:center;
+border:1px solid #2c2c2c;
+box-shadow:0 0 25px rgba(245,197,66,0.08);
+transition:0.4s;
+">
+
+<img src="certificate1.jpeg" style="
+width:100%;
+border-radius:18px;
+border:3px solid #f5c542;
+margin-bottom:20px;
+">
+
+<h3 style="
+color:#f5c542;
+font-size:28px;
+margin-bottom:15px;
+">
+Best Astrologer Award
+</h3>
+
+<p style="
+color:#ccc;
+line-height:1.8;
+">
+Recognized for excellence in Vedic Astrology, Love Problem Solutions and Relationship Guidance.
+</p>
+
+</div>
+
+<!-- CERTIFICATE 2 -->
+
+<div style="
+background:#181818;
+padding:25px;
+border-radius:25px;
+text-align:center;
+border:1px solid #2c2c2c;
+box-shadow:0 0 25px rgba(245,197,66,0.08);
+transition:0.4s;
+">
+
+<img src="certificate2.jpeg" style="
+width:100%;
+border-radius:18px;
+border:3px solid #f5c542;
+margin-bottom:20px;
+">
+
+<h3 style="
+color:#f5c542;
+font-size:28px;
+margin-bottom:15px;
+">
+International Astrology Certificate
+</h3>
+
+<p style="
+color:#ccc;
+line-height:1.8;
+">
+Certified astrology expert trusted by clients across India and worldwide.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATE SECTION END -->
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Vashikaran</h3>
+<p>Powerful Vashikaran solutions for love and relationship issues.</p>
+</div>
+
+<div class="card">
+<h3>Love Marriage</h3>
+<p>Get guidance for successful love marriage and family approval.</p>
+</div>
+
+<div class="card">
+<h3>Divorce Problem</h3>
+<p>Effective solutions for husband wife disputes and divorce issues.</p>
+</div>
+
+<div class="card">
+<h3>Boyfriend Back</h3>
+<p>Bring your lost love and relationship back into your life.</p>
+</div>
+
+<div class="card">
+<h3>Job Problem</h3>
+<p>Career and business astrology guidance for success and growth.</p>
+</div>
+
+<div class="card">
+<h3>Family Problem</h3>
+<p>Remove negativity and restore peace in your family life.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CLIENT REVIEWS SECTION START -->
+
+<section id="reviews" style="padding:100px 8%; background:#111;">
+
+<h2 style="
+text-align:center;
+font-size:50px;
+color:#f5c542;
+margin-bottom:20px;
+font-weight:700;
+">
+Real Client Reviews
+</h2>
+
+<p style="
+text-align:center;
+color:#ccc;
+margin-bottom:60px;
+font-size:18px;
+">
+Trusted By Thousands Of Happy Clients Across India
+</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+">
+
+<!-- REVIEW 1 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+box-shadow:0 0 20px rgba(245,197,66,0.08);
+transition:0.3s;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Piyush Ji solved my breakup problem within few days. My relationship became positive again. Genuine astrologer.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Riya Sharma
+</h4>
+
+</div>
+
+<!-- REVIEW 2 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Best astrologer for love marriage solutions. My parents agreed after remedies suggested by him.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Priya Verma
+</h4>
+
+</div>
+
+<!-- REVIEW 3 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Very powerful astrology guidance. My husband returned after consultation with Piyush Ji.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Neha Kapoor
+</h4>
+
+</div>
+
+<!-- REVIEW 4 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+I was suffering from career problems for years. After remedies my business started growing.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Aman Malhotra
+</h4>
+
+</div>
+
+<!-- REVIEW 5 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Accurate predictions and genuine guidance. Highly trusted astrologer in India.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Simran Kaur
+</h4>
+
+</div>
+
+<!-- REVIEW 6 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+My boyfriend came back after breakup. Thank you Piyush Ji for helping me.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Muskan Arora
+</h4>
+
+</div>
+
+<!-- REVIEW 7 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Fast results and very supportive nature. One of the best astrologers online.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Rohit Sharma
+</h4>
+
+</div>
+
+<!-- REVIEW 8 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Family disputes solved peacefully after consultation. Truly grateful.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Sneha Jain
+</h4>
+
+</div>
+
+<!-- REVIEW 9 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+I got positive energy and mental peace after following remedies.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Rahul Mehta
+</h4>
+
+</div>
+
+<!-- REVIEW 10 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Best astrologer for relationship guidance and marriage issues.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Komal Singh
+</h4>
+
+</div>
+
+<!-- REVIEW 11 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+My ex contacted me again after remedies. Amazing experience.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Aditi Sharma
+</h4>
+
+</div>
+
+<!-- REVIEW 12 -->
+
+<div style="
+background:#1a1a1a;
+padding:30px;
+border-radius:20px;
+border:1px solid #2b2b2b;
+">
+
+<h3 style="color:#f5c542;">★★★★★</h3>
+
+<p style="
+color:#ddd;
+line-height:1.8;
+margin-top:15px;
+">
+Very humble and knowledgeable astrologer. Highly recommended.
+</p>
+
+<h4 style="
+margin-top:20px;
+color:white;
+">
+— Karan Verma
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CLIENT REVIEWS SECTION END -->
+
+<!-- FAQ -->
+
+<section id="faq">
+
+<h2 class="section-title">
+Frequently Asked Questions
+</h2>
+
+<div class="faq">
+
+<details>
+<summary>How does astrology help?</summary>
+<p>
+Astrology helps understand life problems and gives spiritual guidance for solutions.
+</p>
+</details>
+
+<details>
+<summary>Can you solve love problems?</summary>
+<p>
+Yes, solutions are provided for love marriage, breakup, relationship and husband wife problems.
+</p>
+</details>
+
+<details>
+<summary>How to contact you?</summary>
+<p>
+You can directly contact on WhatsApp for personal consultation.
+</p>
+</details>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>
+Contact Astrologer Piyush
+</h2>
+
+<p>
+Get Personal Astrology Guidance Today
+</p>
+
+<a href="https://wa.me/919816004884?text=Hello%20Astrologer%20Piyush%20Ji%2C%20I%20Need%20Guidance" class="btn">
+Chat Now
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Astrologer Piyush Bhriguvanshi | All Rights Reserved
+
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="float-whatsapp" onclick="openWhatsapp()">
+WhatsApp
+</div>
+
+<div class="float-call" onclick="callNow()">
+Call Now
+</div>
+
+<script>
 
 function openWhatsapp(){
 
-    window.open("https://wa.me/919816004884");
+window.open(
+"https://wa.me/919816004884?text=Hello%20Astrologer%20Piyush%20Ji%2C%20I%20Need%20Guidance",
+"_blank"
+)
 
 }
 
-function openInstagram(){
+function callNow(){
 
-    window.open("https://instagram.com");
+window.open(
+"tel:+919816004884"
+)
 
 }
 
 </script>
+
+</body>
+</html>
