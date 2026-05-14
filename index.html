@@ -359,6 +359,7 @@ Astrologer Piyush
 <li><a href="#about">About</a></li>
 <li><a href="#certificates">Awards</a></li>
 <li><a href="#services">Services</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#faq">FAQ</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -578,7 +579,185 @@ Our Services
 </div>
 
 </section>
+<!-- PREMIUM AUTO SERVICE SLIDER -->
 
+<section class="auto-slider">
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Love Problem Solution</h2>
+<p>Get powerful astrology guidance for relationship issues, trust problems and emotional stress.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Boyfriend Back Solution</h2>
+<p>Bring your lost love back with trusted spiritual remedies and astrology consultation.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Marriage Problem Solution</h2>
+<p>Solve husband-wife disputes and relationship conflicts with accurate astrology remedies.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Divorce Problem Solution</h2>
+<p>Save your relationship and remove negativity from married life with spiritual guidance.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Girlfriend Back</h2>
+<p>Get effective astrology remedies to reconnect with your partner and restore love.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Family Problem Solution</h2>
+<p>Remove family stress, arguments and negativity with powerful astrology consultation.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Job Problem Solution</h2>
+<p>Get success in career, promotion and business growth through astrology guidance.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Business Growth Astrology</h2>
+<p>Increase business success and remove financial blockages with spiritual remedies.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Black Magic Removal</h2>
+<p>Powerful protection and negativity removal solutions from expert astrologer.</p>
+</div>
+</div>
+
+<div class="slides fade">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop">
+<div class="slide-content">
+<h2>Vashikaran Specialist</h2>
+<p>Trusted astrology and vashikaran consultation for love, marriage and relationship success.</p>
+</div>
+</div>
+
+</section>
+
+<style>
+.auto-slider{
+width:100%;
+position:relative;
+overflow:hidden;
+margin-top:50px;
+}
+
+.slides{
+display:none;
+position:relative;
+}
+
+.slides img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:20px;
+filter:brightness(45%);
+}
+
+.slide-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+width:80%;
+}
+
+.slide-content h2{
+font-size:52px;
+margin-bottom:20px;
+color:gold;
+font-weight:bold;
+}
+
+.slide-content p{
+font-size:22px;
+line-height:1.8;
+}
+
+.fade{
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:.4}
+to{opacity:1}
+}
+
+@media(max-width:768px){
+
+.slides img{
+height:350px;
+}
+
+.slide-content h2{
+font-size:30px;
+}
+
+.slide-content p{
+font-size:16px;
+}
+
+}
+</style>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+
+let slides = document.getElementsByClassName("slides");
+
+for (let i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+
+slideIndex++;
+
+if (slideIndex > slides.length) {
+slideIndex = 1;
+}
+
+slides[slideIndex-1].style.display = "block";
+
+setTimeout(showSlides, 3500);
+
+}
+</script>
 <!-- CLIENT REVIEWS SECTION START -->
 
 <section id="reviews" style="padding:100px 8%; background:#111;">
@@ -1042,6 +1221,50 @@ window.open(
 
 }
 
+</script>
+<!-- Live Visitor Counter -->
+<div class="visitor-counter">
+👁️ Live Visitors: <span id="visitor-count">128</span>
+</div>
+
+<style>
+.visitor-counter{
+position: fixed;
+bottom: 20px;
+left: 20px;
+background: #111;
+color: #fff;
+padding: 12px 18px;
+border-radius: 50px;
+font-size: 16px;
+font-weight: bold;
+z-index: 9999;
+box-shadow: 0px 0px 15px rgba(255,215,0,0.7);
+border: 2px solid gold;
+animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{
+transform: scale(1);
+}
+50%{
+transform: scale(1.05);
+}
+100%{
+transform: scale(1);
+}
+}
+</style>
+
+<script>
+function updateVisitors() {
+let randomVisitors = Math.floor(Math.random() * 80) + 120;
+document.getElementById("visitor-count").innerText = randomVisitors;
+}
+
+setInterval(updateVisitors, 3000);
+updateVisitors();
 </script>
 
 </body>
